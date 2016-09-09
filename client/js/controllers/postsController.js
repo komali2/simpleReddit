@@ -21,6 +21,7 @@ angular.module('redditApp')
   }])
   .controller('postsController', ['$scope', 'postsFactory', ($scope, postsFactory) => {
     $scope.posts = [];
+
     $scope.$watch('reddit', (newVal, oldVal)=>{
       newVal.forEach((sub)=>{
         sub.list.forEach((post)=>{
@@ -28,5 +29,10 @@ angular.module('redditApp')
         });
       });
     }, true);
+
+    $scope.filterSubs = function(value, index, array){
+      return $scope.subsToShow[value.subreddit];
+
+    };
 
   }]);
