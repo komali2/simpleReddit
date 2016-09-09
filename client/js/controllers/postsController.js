@@ -10,7 +10,7 @@ angular.module('redditApp')
         url: raw.url,
         created: raw.created,
         title: raw.title,
-        num_comment: raw.num_comments,
+        num_comments: raw.num_comments,
         ups: raw.ups,
         thumbnail: raw.thumbnail
       };
