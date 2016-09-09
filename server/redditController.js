@@ -1,9 +1,13 @@
+var request = require('request');
+
 module.exports = {
   getFrontPage: function(req, res){
 
     res.send();
   },
   getSub: function(req, res){
+    var sub = req.params.sub;
+
     res.send();
   }
 };
