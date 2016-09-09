@@ -7,18 +7,22 @@ var app = angular.module('redditApp', ['ngAnimate'])
   .controller('mainController', [
     '$scope', '$http',
     ($scope, $http) => {
-
+      $scope.subsToShow = {};
       $scope.reddit = [];
       $http({
         method: 'GET',
         url: '/reddit'
       }).then(function(response){
         Array.prototype.push.apply($scope.reddit, response.data);
+        $scope.reddit.forEach((el)=>{
+          $scope.subsToShow[el.sub] = true;
+        });
       }, function(response){
         console.log('Nope!', response);
       });
 
       $scope.$watch('reddit', (newVal)=>{
+        console.log('reddit updated');
       }, true);
 
 

@@ -1,15 +1,13 @@
 angular.module('redditApp')
   .factory('searchFactory', ['$http', ($http)=>{
     var api = {};
+  
 
     api.searchSub = function(value){
-      $http({
+      return $http({
         method: 'GET',
         url: `/reddit/${value}`
-      })
-      .then(function(response){
-        console.log('got response', response);
-      }, function(response){});
+      });
     };
 
     return api;
@@ -18,6 +16,11 @@ angular.module('redditApp')
   ['$scope', 'searchFactory', 
   ($scope, searchFactory) => {
 
-    $scope.searchSub = searchFactory.searchSub;
-    
+    $scope.searchSub = function(val){
+      searchFactory.searchSub(val)
+      .then(function(response){
+        $scope.subsToShow[response.data.sub] = true;
+        $scope.reddit.push(response.data);
+      }, function(response){});;
+    };
   }]);
