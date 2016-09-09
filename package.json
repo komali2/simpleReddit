@@ -1,0 +1,29 @@
+{
+  "name": "simplereddit",
+  "version": "1.0.0",
+  "description": "A simple reddit browser",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "karma start karma.conf.js",
+    "dev": "nodemon server/server.js",
+    "start": "node server/sever.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/komali2/simpleReddit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/komali2/simpleReddit/issues"
+  },
+  "homepage": "https://github.com/komali2/simpleReddit#readme",
+  "devDependencies": {
+    "angular-mocks": "^1.5.8",
+    "eslint": "^3.3.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2"
+  }
+}
