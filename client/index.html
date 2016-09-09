@@ -23,6 +23,9 @@
     <div id='search' class='area' ng-controller='searchController'>
     </div>
     <div id='list' class='area' ng-controller='listController'>
+      <ul>
+        <li ng-repeat='sub in reddit'>{{sub.sub}}</li>
+      </ul>
     </div>
     <div id='posts' class='area' ng-controller='postsController'>
     </div>

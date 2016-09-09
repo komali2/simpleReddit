@@ -3,6 +3,6 @@ angular.module('redditApp')
 
   }])
   .controller('listController', ['$scope', ($scope) => {
-
+    
     
   }]);
