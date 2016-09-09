@@ -7,8 +7,22 @@ module.exports = {
   },
   getSub: function(req, res){
     var sub = req.params.sub;
+    var requestObject = {
+      url: `http://www.reddit.com/r/${sub}.json`,
+      method: 'GET'
+    };
+    request(requestObject, (err, response, body)=>{
+      if(err){
+        handleError(response, err.message, 'No such subreddit', 404);
+      } 
+      else{
+        var objOut = {sub};
+        var content = JSON.parse(body);
+        objOut.list = content.data.children;
+        res.send(JSON.stringify(objOut));
+      }
+    });
 
-    res.send();
   }
 };
 
