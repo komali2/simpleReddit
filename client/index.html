@@ -26,13 +26,13 @@
     </div>
     <div id='list' class='area' ng-controller='listController'>
       <ul>
-        <li ng-repeat='sub in reddit'><label>{{sub.sub}}
+        <li ng-repeat='sub in reddit '><label>{{sub.sub}}
           <input type='checkbox' ng-model='subsToShow[sub.sub]'></label>
         </li>
       </ul>
     </div>
     <div id='posts' class='area' ng-controller='postsController'>
-      <div ng-repeat='post in posts'>
+      <div ng-repeat='post in posts | orderBy: "ups" : true'>
         <div class='subreddit'>{{post.subreddit}}</div>
         <div class='ups'>{{post.ups}}</div>
         <div class='title'>{{post.title}}</div>
