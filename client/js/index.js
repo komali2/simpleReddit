@@ -9,6 +9,7 @@ var app = angular.module('redditApp', ['ngAnimate'])
     ($scope, $http) => {
       $scope.subsToShow = {};
       $scope.reddit = [];
+
       $http({
         method: 'GET',
         url: '/reddit'
@@ -22,7 +23,7 @@ var app = angular.module('redditApp', ['ngAnimate'])
       });
 
       $scope.$watch('reddit', (newVal)=>{
-        console.log('reddit updated');
+        console.log('reddit updated', newVal);
       }, true);
 
 

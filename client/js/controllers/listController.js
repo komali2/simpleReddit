@@ -4,7 +4,7 @@ angular.module('redditApp')
   }])
   .controller('listController', ['$scope', ($scope) => {
     $scope.$watch('subsToShow', ()=>{
-      console.log('subs to show changed');
+      
     }, true)
     
   }]);
