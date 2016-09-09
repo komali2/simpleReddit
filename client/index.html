@@ -33,9 +33,12 @@
     </div>
     <div id='posts' class='area' ng-controller='postsController'>
       <div ng-repeat='post in posts | orderBy: "ups" : true | filter: filterSubs'>
-        <div class='subreddit'>{{post.subreddit}}</div>
         <div class='ups'>{{post.ups}}</div>
+        <div class='subreddit'>{{post.subreddit}}</div>
         <div class='title'>{{post.title}}</div>
+        <div class='author'>{{post.author}}</div>
+        <div class='comments'>{{post.num_comments}}</div>
+        <div class='created'>{{post.created}}</div>
 
       </div>
     </div>
