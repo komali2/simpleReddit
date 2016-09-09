@@ -34,7 +34,7 @@
     <div id='posts' class='area' ng-controller='postsController'>
       <div class ='post' ng-repeat='post in posts | orderBy: "ups" : true | filter: filterSubs'>
         <div class='ups'>{{post.ups}}</div>
-        <img src='{{post.thumbnail}}'></img>
+        <img src='{{post.thumbnail}}' ng-if='post.thumbnail'></img>
         <div class='subreddit'>{{post.subreddit}}</div>
         <div class='title'><a href='{{post.url}}'>{{post.title}}</a></div>
         <div class='author'>{{post.author}}</div>
