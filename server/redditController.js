@@ -1,9 +1,10 @@
 module.exports = {
   getFrontPage: function(req, res){
 
+    res.send();
   },
   getSub: function(req, res){
-
+    res.send();
   }
 };
 
