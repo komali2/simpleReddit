@@ -21,6 +21,6 @@ angular.module('redditApp')
       .then(function(response){
         $scope.subsToShow[response.data.sub] = true;
         $scope.reddit.push(response.data);
-      }, function(response){});;
+      }, function(response){});
     };
   }]);

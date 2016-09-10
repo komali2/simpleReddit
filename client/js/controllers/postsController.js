@@ -24,13 +24,21 @@ angular.module('redditApp')
     $scope.posts = [];
 
     $scope.$watch('reddit', (newVal, oldVal)=>{
+      console.log('postcontroller saw reddit update');
       newVal.forEach((sub)=>{
         sub.list.forEach((post)=>{
-          $scope.posts.push(postsFactory.makeRedditPost(post.data));
+          if(!$scope.posts.find((oldPost)=>{
+            return oldPost.url === post.data.url;
+          })){
+            $scope.posts.push(postsFactory.makeRedditPost(post.data));
+          }
         });
       });
     }, true);
 
+    $scope.$watch('posts', ()=>{
+      console.log('posts updated');
+    });
     $scope.filterSubs = function(value, index, array){
       return $scope.subsToShow[value.subreddit];
 
