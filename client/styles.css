@@ -72,6 +72,16 @@ a {
     text-align: right;
 }
 
+#list label{
+  padding-left: 3px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+#list label:hover{
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
 #posts{
   display: flex;
   flex-direction: row;
@@ -122,13 +132,6 @@ a {
 }
 
 
-
-@media (max-width: 740px) {
-  #listArea {
-    flex-direction: row; 
-    width: 100%;   
-  }
-}
 
 .widthSet {
   animation: 1s bringIn;
