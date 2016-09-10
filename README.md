@@ -16,6 +16,7 @@ Styling uses flexbox for structure and ng-animate for animations. Styling is ins
 3. Implement full testing. 
 4. Smooth transitions and animations.
 5. Simplify repopulating of existing posts.
+6. Link to user profiles and comment sections. 
 
 ---
 
