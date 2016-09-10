@@ -20,18 +20,19 @@
 <body>
   <!-- Main App -->
   <div class='main' ng-controller='mainController'>
+    <div ng-if='loading'>Loading...</div>
     <div id='search' class='area' ng-controller='searchController'>
       <input type='text' ng-model='search' />
       <button ng-click='searchSub(search)'>Search</button>
     </div>
-    <div id='list' class='area' ng-controller='listController'>
+    <div ng-if='!loading' id='list' class='area' ng-controller='listController'>
       <ul>
         <li ng-repeat='sub in reddit '><label>{{sub.sub}}
           <input type='checkbox' ng-model='subsToShow[sub.sub]'></label>
         </li>
       </ul>
     </div>
-    <div id='posts' class='area' ng-controller='postsController'>
+    <div ng-if='!loading' id='posts' class='area' ng-controller='postsController'>
       <div class ='post' ng-repeat='post in posts | orderBy: "ups" : true | filter: filterSubs'>
 
         <img src='{{post.thumbnail}}' ng-if='post.thumbnail'></img>
