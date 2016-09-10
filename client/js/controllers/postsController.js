@@ -39,7 +39,6 @@ angular.module('redditApp')
     });
     $scope.filterSubs = function(value, index, array){
       return $scope.subsToShow[value.subreddit];
-
     };
 
   }]);
