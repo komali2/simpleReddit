@@ -86,6 +86,8 @@ a {
 .post .content{
   display: flex;
   flex-direction: column;
+  text-overflow: ellipsis;
+  align-items: center;
 }
 
 .post .ups{
@@ -101,6 +103,9 @@ a {
 }
 
 .post .title{
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
 }
 
