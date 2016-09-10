@@ -64,7 +64,7 @@ a {
     margin: 0;
 }
 #list li{
-      list-style: none;
+    list-style: none;
     display: inline-block;
     width: calc(100% / 4);
     height: 1.2em;
@@ -75,6 +75,7 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 #posts .post{
   display: flex;
