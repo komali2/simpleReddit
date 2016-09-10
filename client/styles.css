@@ -7,7 +7,6 @@ a {
 }
 
 .area{
-  border: 1px solid black;
 
 }
 
@@ -52,6 +51,8 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   font-size: 15px;
+      margin-right: 10px;
+    margin-bottom: 5px;
 }
 
 #list ul{
@@ -80,9 +81,10 @@ a {
 #posts .post{
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
   width: 200px;
   height: 300px;
+  margin: 3px;
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
 .post .content{
