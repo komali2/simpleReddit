@@ -72,12 +72,44 @@ a {
 
 #posts{
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 #posts .post{
-  display: block;
+  display: flex;
+  flex-direction: column;
   border: 1px solid black;
+  width: 200px;
+  height: 300px;
+}
+
+.post .content{
+  display: flex;
+  flex-direction: column;
+}
+
+.post .ups{
+}
+
+.post img{
+  width: 100%;
+    height: auto;
+}
+
+.post .subreddit{
+
+}
+
+.post .title{
+
+}
+
+.post .author{
+
+}
+
+.post .comments{
+
 }
 
 
