@@ -24,7 +24,6 @@ angular.module('redditApp')
     $scope.posts = [];
 
     $scope.$watch('reddit', (newVal, oldVal)=>{
-      console.log('postcontroller saw reddit update');
       newVal.forEach((sub)=>{
         sub.list.forEach((post)=>{
           if(!$scope.posts.find((oldPost)=>{
@@ -37,7 +36,6 @@ angular.module('redditApp')
     }, true);
 
     $scope.$watch('posts', ()=>{
-      console.log('posts updated');
     });
     $scope.filterSubs = function(value, index, array){
       return $scope.subsToShow[value.subreddit];

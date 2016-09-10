@@ -25,7 +25,6 @@ var app = angular.module('redditApp', ['ngAnimate'])
       });
 
       $scope.$watch('reddit', (newVal)=>{
-        console.log('updated');
       }, true);
 
 
